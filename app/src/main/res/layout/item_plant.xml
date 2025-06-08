@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/content_card"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="@color/white"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_plant_name"
+                style="@style/PoppinsText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="140dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="16dp"
+                android:text="Daun Hijau"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_plant_price"
+                style="@style/PoppinsText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Rp 200.000"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@id/tv_plant_name"
+                app:layout_constraintStart_toStartOf="@id/tv_plant_name"
+                app:layout_constraintTop_toBottomOf="@id/tv_plant_name" />
+
+            <Button
+                android:id="@+id/btn_delete"
+                style="@style/PoppinsText"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#FF0004"
+                android:minWidth="80dp"
+                android:text="Hapus"
+                android:textColor="@android:color/white"
+                app:cornerRadius="12dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tv_plant_price" />
+
+            <Button
+                android:id="@+id/btn_detail"
+                style="@style/PoppinsText"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:backgroundTint="#75CF62"
+                android:minWidth="80dp"
+                android:text="Detail"
+                app:cornerRadius="12dp"
+                app:layout_constraintStart_toEndOf="@id/btn_delete"
+                app:layout_constraintTop_toTopOf="@id/btn_delete" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/image_card"
+        android:layout_width="110dp"
+        android:layout_height="157dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="-50dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        android:backgroundTint="@color/white"
+        app:layout_constraintStart_toStartOf="@id/content_card"
+        app:layout_constraintTop_toTopOf="@id/content_card">
+
+        <ImageView
+            android:id="@+id/iv_plant_image"
+            android:layout_width="87dp"
+            android:layout_height="147dp"
+            android:layout_gravity="center" />
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
